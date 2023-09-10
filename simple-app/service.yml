@@ -10,3 +10,15 @@ spec:
       - nodePort: 31000
         protocol: TCP
         port: 8080
+
+kind: Service
+metadata:
+  name: simple-service-2
+spec:
+  type: NodePort
+  selector:
+    app: trivial-go-web-app-2
+  ports:
+      - nodePort: 31002
+        protocol: TCP
+        port: 8080
